@@ -11,7 +11,7 @@ public class UnitRestController {
     private UnitService unitService;
 
     @GetMapping("/test")
-    public String getMessage(){
-        return "test";
+    public String getMessage(String returnStr){
+        return returnStr;
     }
 }

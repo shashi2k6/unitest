@@ -6,6 +6,7 @@ import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest
@@ -18,7 +19,7 @@ class UnitApplicationTests {
 
 	@Test
 	void test_restController() {
-		when(unitRestController.getMessage()).thenReturn("");
+		when(unitRestController.getMessage(anyString())).thenReturn(null);
 	}
 
 	@InjectMocks
